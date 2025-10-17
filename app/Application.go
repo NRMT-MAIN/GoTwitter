@@ -28,7 +28,7 @@ func NewConfig() *Config {
 func NewApplication(cfg Config) *Application {
 	return &Application{
 		Config : cfg ,
-		Store : *db.NewStorage()
+		Store : *db.NewStorage() ,
 	}
 }
 

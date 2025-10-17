@@ -3,7 +3,7 @@ package respositories
 import "database/sql"
 
 type UserRepository interface {
-	Create() error
+	//Create() error
 }
 
 type UserRepositoryImpl struct {

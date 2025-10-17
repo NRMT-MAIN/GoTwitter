@@ -8,6 +8,10 @@ import (
 	"github.com/joho/godotenv"
 )
 
+func init() {
+	Load()
+}
+
 func Load() {
 	err := godotenv.Load()
 
@@ -18,6 +22,8 @@ func Load() {
 
 func GetString(key string , fallback string) string {
 	value , ok := os.LookupEnv(key)
+
+	fmt.Println(key + " ---> " + value)
 
 	if !ok {
 		return fallback
@@ -41,3 +47,4 @@ func GetInt(key string, fallback int) int {
 
 	return intValue
 }
+
